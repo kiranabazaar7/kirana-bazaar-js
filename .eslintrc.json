@@ -1,0 +1,34 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "import/extensions": "off",
+    // Team conventions already allowed 120 characters
+    "max-len": ["warn", 120, {
+      "ignorePattern": "^import"
+    }]
+  },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true,
+    "shallowWithIntl": true,
+    "mountWithIntl": true,
+    "Terra": true,
+    "browser": true,
+    "before": true
+  }
+}
