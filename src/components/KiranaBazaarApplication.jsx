@@ -7,18 +7,20 @@
 
 import React from 'react';
 import PropTypes from 'proptypes';
+import ContentContainer from 'terra-content-container';
 import UserLanding from './Landing/UserLanding';
+import AdminLanding from './Landing/AdminLanding';
 
 const KiranaBazaarApplication = (props) => (
-  <div>
+  <ContentContainer fill>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossOrigin="anonymous"
     />
-    {props.isUserPage && <UserLanding />}
-  </div>
+    {props.isUserPage ? <UserLanding /> : <AdminLanding />}
+  </ContentContainer>
 );
 
 KiranaBazaarApplication.propTypes = {
