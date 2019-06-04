@@ -22,4 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.idea
+.idea/
+/dev-site-config/build
+dev-site-config/build/
