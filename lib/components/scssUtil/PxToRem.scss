@@ -1,0 +1,22 @@
+
+$base-font-size: 14;
+
+/**
+ * Converts the provided pixel measurement to REMS with the base-font-size provided.
+ *
+ * @param {Number} $pixels
+ *    The pixel amount to convert
+ * @param {Number} [$context=14]
+ *     The base font size to use. Defaults to 14px.
+ */
+@function px-to-rem($pixels, $context: $base-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

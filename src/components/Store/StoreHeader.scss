@@ -1,0 +1,42 @@
+@import '../scssUtil/PxToRem';
+
+:local {
+  .header-container {
+    background-color: #26364b;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-image {
+    height: px-to-rem(150);
+    width: px-to-rem(220);
+  }
+
+
+  .header-title {
+    color: #e6ebfa;
+    padding-top: px-to-rem(10);
+  }
+
+  .header-location {
+    color: #b3b7c6;
+  }
+
+  .header-search {
+    margin-top: px-to-rem(50);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header-image {
+      height: px-to-rem(150);
+      width: px-to-rem(150);
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .header-image {
+      height: px-to-rem(100);
+      width: px-to-rem(100);
+    }
+  }
+}
